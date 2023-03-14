@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.pane{
+    -fx-background-color: cornflowerblue;
+}
+
+.boton{
+    -fx-border-radius: 0 50 50 0;
+    -fx-background-radius: 0 50 50 0;
+    -fx-background-color: #FF1744;
+}

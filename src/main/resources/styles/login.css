@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+.fondo{
+   -fx-background-color: cornflowerblue; 
+}
+
+
+.boton{
+    -fx-border-radius: 50 50 50 50;
+    -fx-background-radius: 50 50 50 50;
+    -fx-background-color: #FF1744;
+}
