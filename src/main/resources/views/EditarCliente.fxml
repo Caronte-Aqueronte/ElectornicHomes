@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="424.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/editarcliente.css" />
+    </stylesheets>
+   <children>
+      <MFXTextField fx:id="txtNit" floatMode="BORDER" floatingText="Nit" layoutX="79.0" layoutY="49.0" prefHeight="50.0" prefWidth="265.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXTextField fx:id="txtNombre" floatMode="BORDER" floatingText="Nombre" layoutX="79.0" layoutY="132.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXTextField fx:id="txtTelefono" floatMode="BORDER" floatingText="Teléfono " layoutX="79.0" layoutY="219.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXButton fx:id="btnEditar" buttonType="RAISED" layoutX="79.0" layoutY="301.0" onAction="#editarCliente" prefHeight="50.0" prefWidth="266.0" rippleColor="#03a9f4" text="Editar cliente">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+   </children>
+</AnchorPane>

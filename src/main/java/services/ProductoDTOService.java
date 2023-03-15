@@ -20,6 +20,11 @@ public class ProductoDTOService {
         productoDTORepository = new ProductoDTORepository();
     }
 
+    /**
+     * Invoca el metodo de ProductoDTORepository que es capaz de mostrar el invnetario de una sucursal.
+     * @param sucursal
+     * @return 
+     */
     public ObservableList<ProductoDTO> buscarProductoDtoPorCodigoBarras(String sucursal) {
         return productoDTORepository.mostrarProductosDtoPorSucursal(sucursal);
     }

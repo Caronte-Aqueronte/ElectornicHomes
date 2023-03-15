@@ -13,12 +13,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>13</version>
+            <version>19</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>13</version>
+            <version>19</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql  DRIVER DE POSTGRESQL-->
         <dependency>
@@ -31,24 +31,6 @@
             <groupId>io.github.palexdev</groupId>
             <artifactId>materialfx</artifactId>
             <version>11.13.9</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>group.id</groupId>
-            <artifactId>iconos1</artifactId>
-            <version>1.0</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>group.id</groupId>
-            <artifactId>iconos2</artifactId>
-            <version>1.0</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>group.id</groupId>
-            <artifactId>iconos3</artifactId>
-            <version>1.0</version>
         </dependency>
         
     </dependencies>

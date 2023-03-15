@@ -4,15 +4,15 @@
  */
 package controllers;
 
-import de.jensd.fx.glyphs.materialicons.MaterialIcon;
-import de.jensd.fx.glyphs.materialicons.MaterialIconView;
 import dto.ProductoDTO;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXDatePicker;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import io.github.palexdev.materialfx.controls.MFXToggleButton;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,17 +20,18 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Cursor;
 import javafx.scene.control.Alert;
+import services.VentaService;
+import models.Venta;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.InputMethodEvent;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Paint;
-import javafx.stage.Stage;
 import javafx.util.Callback;
 import models.Cliente;
 import models.Empleado;
@@ -47,7 +48,8 @@ public class VentasController implements Initializable {
     private boolean estadoCf = false;
     private ClienteService clienteService;
     private ProductoDTOService productoDTOService;
-    
+    private VentaService ventaService;
+
     @FXML
     private TableColumn codugoBarrasColumn;
     @FXML
@@ -98,17 +100,69 @@ public class VentasController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         clienteService = new ClienteService();
         productoDTOService = new ProductoDTOService();
+        ventaService = new VentaService();
         darModeloALasTablas();
         mostrarInventarioDeLaSucursal();
 
     }
-    
-    private void mostrarInventarioDeLaSucursal(){
-        Stage stage = (Stage) this.labelNit.getScene().getWindow();//obtenemos el stage
-        Empleado empleado = (Empleado) stage.getUserData();
+
+    /**
+     * Busca el inventario de la sucursal de vendedor mediante el metodo
+     * buscarProductoDtoPorCodigoBarras de ProductoDTOService.
+     */
+    private void mostrarInventarioDeLaSucursal() {
+        Empleado empleado = LoginController.empleadoLogeado;
         //mandamos a buscar el inventario de la sucursal del empleado
         ObservableList<ProductoDTO> inventario = productoDTOService.buscarProductoDtoPorCodigoBarras(empleado.getSucursal());
         tablaInventario.setItems(inventario);
+    }
+
+    /**
+     * Recolecta los datos del formulario, valida si la venta es CF o no y a
+     * partir de ello manda a registrar la venta con el metodo
+     * registrarVentaConNit dentro de VentaService.
+     */
+    @FXML
+    private void pagar() {
+        String confirmacion = "Parámetros numéricos con formato incorrecto.";
+        try {
+            //obtenemos la lista del carrito
+            ObservableList<ProductoDTO> carrito = tablaCarrito.getItems();
+            //obtenemos la fecha de la compra
+            LocalDate fecha = txtFecha.getValue();
+            //obtener el total de la compra
+            double total = Double.parseDouble(txtTotal.getText());
+            //verificar que tipo de venta es CF o con cliente
+
+            if (estadoCf) {
+                //mandamos a hacer una compra cf
+                Venta venta = new Venta("", LoginController.empleadoLogeado.getSucursal(),
+                        LoginController.empleadoLogeado.getIdEmpleado(), total, 0, total, fecha);
+                confirmacion = ventaService.registrarVentaSinNit(venta, carrito);
+            } else {
+                //obtenemos los datos del cliente
+                long nit = Long.parseLong(txtNit.getText());
+                String nombre = txtNombre.getText();
+                int telefono = Integer.parseInt(txtTelefono.getText());
+                //creamos un cliente a partir de esos datos
+                Cliente cliente = new Cliente(nit, nombre, telefono);
+                //creamos una venta con los datos 
+                Venta venta = new Venta("", LoginController.empleadoLogeado.getSucursal(),
+                        LoginController.empleadoLogeado.getIdEmpleado(), total, 0, total, fecha);
+                //mandamos ha hacer la venta
+                confirmacion = ventaService.registrarVentaConNit(cliente, venta, carrito);
+            }
+
+            new Alert(Alert.AlertType.INFORMATION, confirmacion).show();
+            borrarTodosLosCampos();
+            vaciarCarrito();
+            mostrarInventarioDeLaSucursal();
+
+        } catch (NumberFormatException ex) {
+            new Alert(Alert.AlertType.ERROR, "Parámetros numéricos con formato incorrecto.").show();
+        } catch (Exception ex) {
+            new Alert(Alert.AlertType.ERROR, ex.getMessage()).show();
+        }
     }
 
     /**
@@ -219,21 +273,18 @@ public class VentasController implements Initializable {
                         setGraphic(null);
                         setText(null);
                     } else {
-                        MaterialIconView btnMas = new MaterialIconView(MaterialIcon.ADD);
+
+                        ImageView botonMas = new ImageView(new Image("/img/agregar.png"));
                         //damos el tipo de cursor al icono
-                        btnMas.setCursor(Cursor.HAND);
-                        //damos color al icono
-                        btnMas.setFill(Paint.valueOf("#76ff03"));
-                        //le damos tamanio al boton
-                        btnMas.setStyle("-glyph-size:28px;");
+                        botonMas.setCursor(Cursor.HAND);
                         //le damos un evento de click al boton de agregar
-                        btnMas.setOnMouseClicked((MouseEvent event) -> {
+                        botonMas.setOnMouseClicked((MouseEvent event) -> {
                             eliminarDelInventario();
                         });
-                        HBox managebtn = new HBox(btnMas);
+                        HBox managebtn = new HBox(botonMas);
                         managebtn.setStyle("-fx-alignment:center");
                         managebtn.setSpacing(10);
-                        HBox.setMargin(btnMas, new Insets(2, 2, 0, 3));
+                        HBox.setMargin(botonMas, new Insets(2, 2, 0, 3));
                         setGraphic(managebtn);
                         setText(null);
                     }
@@ -260,15 +311,9 @@ public class VentasController implements Initializable {
                         setGraphic(null);
                         setText(null);
                     } else {
-                        MaterialIconView btnMenos = new MaterialIconView(MaterialIcon.DELETE);
+                        ImageView btnMenos = new ImageView(new Image("/img/menos.png"));
                         //damos el tipo de cursor al icnono
                         btnMenos.setCursor(Cursor.HAND);
-                        //damos colores al icono
-                        btnMenos.setFill(Paint.valueOf("#FF1744"));
-                        //dar tamanio al boron
-                        btnMenos.setStyle(
-                                "-glyph-size:28px;"
-                        );
                         //le damos un evento de click al botom menos
                         btnMenos.setOnMouseClicked((MouseEvent event) -> {
                             eliminarDelCarrito();
@@ -307,6 +352,8 @@ public class VentasController implements Initializable {
         tablaInventario.setItems(inventario);
         //refrescamos la tabla
         tablaInventario.refresh();
+        //por ultimos mandamos a regrescar el total y el numero de items apagar
+        calcularTotalYNumeroDeItems();
     }
 
     /**
@@ -331,7 +378,56 @@ public class VentasController implements Initializable {
         tablaCarrito.setItems(carrito);
         //refrescamos la tabla
         tablaCarrito.refresh();
+        calcularTotalYNumeroDeItems();
 
+    }
+
+    /**
+     * Obtiene el total de la compra iterando en la tabla, ademas obtiene el
+     * numero de registros enla tabla con el metodo size().
+     */
+    private void calcularTotalYNumeroDeItems() {
+        //mandamos a traer los items del carrito
+        ObservableList<ProductoDTO> carrito = tablaCarrito.getItems();
+        //con un forEach recoremos el array y vamos sumando el total
+        double total = 0;
+        for (ProductoDTO item : carrito) {
+            total += item.getPrecioVenta();
+        }
+        //seteamos los campos con el total y el numero de items 
+        txtTotal.setText(String.valueOf(total));
+        txtNumItems.setText(String.valueOf(carrito.size()));
+    }
+
+    /**
+     * Borra todos los campos de formulario y los habilita. El campo Nit sera
+     * habilitado si el Switch CF no esta activado.
+     */
+    private void borrarTodosLosCampos() {
+        //dejamos los txt activos
+        this.txtNombre.setEditable(true);
+        this.txtTelefono.setEditable(true);
+        if (this.estadoCf) {
+            this.txtNit.setEditable(false);
+        } else {
+            this.txtNit.setEditable(true);
+        }
+        //borramos los campos
+        this.txtNit.setText("");
+        this.txtNombre.setText("");
+        this.txtTelefono.setText("");
+        this.txtFecha.setText("");
+        this.txtTotal.setText("");
+        this.txtNumItems.setText("");
+    }
+
+    /**
+     * Elimina todos los registros del carrito.
+     */
+    private void vaciarCarrito() {
+        ObservableList<ProductoDTO> carritoVacio = FXCollections.observableArrayList();
+        tablaCarrito.setItems(carritoVacio);
+        tablaCarrito.refresh();
     }
 
 }

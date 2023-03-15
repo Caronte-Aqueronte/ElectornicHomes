@@ -15,7 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import models.Empleado;
 
 /**
  * FXML Controller class
@@ -52,11 +51,9 @@ public class MenuVendedorController implements Initializable {
         try {
             //obtener los datos del usuario
             Stage stage = (Stage) this.btnVentas.getScene().getWindow();//obtenemos el stage
-            Empleado empleado = (Empleado) stage.getUserData();
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Ventas.fxml"));//cargador de las escenas
             Parent parent = loader.load();//cargamos la escena
-            parent.setUserData(empleado);//guardamos la infomacion del empeado en el parent
             panelContenedor.setContent(parent);//adjuntamos la escena al panel
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -73,11 +70,9 @@ public class MenuVendedorController implements Initializable {
         try {
             //obtener los datos del usuario
             Stage stage = (Stage) this.btnVentas.getScene().getWindow();//obtenemos el stage
-            Empleado empleado = (Empleado) stage.getUserData();
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/PocaExistenciaVista.fxml"));//cargador de las escenas
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Clientes.fxml"));//cargador de las escenas
             Parent parent = loader.load();//cargamos la escena
-            parent.setUserData(empleado);//guardamos la infomacion del empeado en el parent
             panelContenedor.setContent(parent);//adjuntamos la escena al panel
         } catch (IOException ex) {
 

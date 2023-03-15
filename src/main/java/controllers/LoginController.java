@@ -29,6 +29,7 @@ import services.EmpleadoService;
  */
 public class LoginController implements Initializable {
 
+    public static Empleado empleadoLogeado;
     private EmpleadoService empleadoService;
     @FXML
     private MFXPasswordField txtPassword;
@@ -60,6 +61,7 @@ public class LoginController implements Initializable {
         Empleado empleado = new Empleado(usuario, password);
         try {
             Empleado empleadoEncontrado = empleadoService.login(empleado);
+            empleadoLogeado = empleadoEncontrado;
             elegirMenu(empleadoEncontrado);
         } catch (Exception ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR, ex.getMessage());
@@ -91,8 +93,7 @@ public class LoginController implements Initializable {
     }
 
     /**
-     * Abre el menu que recibe como parametro. Ademas, adjunta la informacion
-     * del usuario que se logeo.
+     * Abre el menu que recibe como parametro. Ademas.
      *
      * @param menu
      * @param info
@@ -103,7 +104,6 @@ public class LoginController implements Initializable {
             Parent parent = loader.load();//crear un pareinte
             Scene scene = new Scene(parent);//creamos la vista con el pareitne
             Stage stage = new Stage();//cremos la ventana
-            stage.setUserData(info);//al stage le damos un user data
             stage.setScene(scene);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/aparato-electrico.png")));//le damos un icono a la ventana
             stage.show();//ensenamos la ventana

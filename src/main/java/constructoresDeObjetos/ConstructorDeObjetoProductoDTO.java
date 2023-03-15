@@ -24,7 +24,7 @@ public class ConstructorDeObjetoProductoDTO implements ConstructorDeObjeto {
      * @throws SQLException
      */
     @Override
-    public ObservableList<ProductoDTO> contruirLista(ResultSet resultado) throws SQLException {
+    public ObservableList<ProductoDTO> construirLista(ResultSet resultado) throws SQLException {
         ObservableList<ProductoDTO> productos = FXCollections.observableArrayList();
         while (resultado.next()) {
             //Esxtraer las columnas de la tabla
@@ -46,7 +46,7 @@ public class ConstructorDeObjetoProductoDTO implements ConstructorDeObjeto {
      * @throws SQLException
      */
     @Override
-    public ProductoDTO contruirObjeto(ResultSet resultado) throws SQLException {
+    public ProductoDTO construirObjeto(ResultSet resultado) throws SQLException {
         while (resultado.next()) {
             //Esxtraer las columnas de la tabla
             int codigoBarras = resultado.getInt("codigo_barras");

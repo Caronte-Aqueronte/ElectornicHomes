@@ -20,6 +20,11 @@ import javafx.collections.ObservableList;
  */
 public class ProductoDTORepository extends ConstructorDeObjetoProductoDTO {
     
+    /**
+     * Se comunica a la base de datos y obteiene el inventario de una sucursal.
+     * @param sucursal
+     * @return 
+     */
     public ObservableList<ProductoDTO> mostrarProductosDtoPorSucursal(String sucursal) {
         String query = "SELECT a.codigo_barras, b.nombre, b.precio_venta FROM "
                 + "RegistroRecursos.Compra a INNER JOIN RegistroRecursos.Producto "
@@ -29,7 +34,7 @@ public class ProductoDTORepository extends ConstructorDeObjetoProductoDTO {
             ps.setString(1, sucursal);
             ps.setString(2, "VENDIDO");
             ResultSet resultado = ps.executeQuery();
-            return contruirLista(resultado);
+            return construirLista(resultado);
         } catch (SQLException ex) {
             return FXCollections.observableArrayList();
         }

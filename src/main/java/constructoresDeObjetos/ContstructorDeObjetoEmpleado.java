@@ -25,7 +25,7 @@ public class ContstructorDeObjetoEmpleado implements ConstructorDeObjeto {
      * @throws SQLException
      */
     @Override
-    public ObservableList<Empleado> contruirLista(ResultSet resultado) throws SQLException {
+    public ObservableList<Empleado> construirLista(ResultSet resultado) throws SQLException {
         ObservableList<Empleado> empleados = FXCollections.observableArrayList();
         while (resultado.next()) {
             //Esxtraer las columnas de la tabla
@@ -50,7 +50,7 @@ public class ContstructorDeObjetoEmpleado implements ConstructorDeObjeto {
      * @throws SQLException 
      */
     @Override
-    public Empleado contruirObjeto(ResultSet resultado) throws SQLException {
+    public Empleado construirObjeto(ResultSet resultado) throws SQLException {
         while (resultado.next()) {
             //Extraer las columnas de la tabla
             int idEmpleado = resultado.getInt("id_empleado");

@@ -25,7 +25,7 @@ public class ConstructorDeObjetoCliente implements ConstructorDeObjeto {
      * @throws SQLException
      */
     @Override
-    public ObservableList<Cliente> contruirLista(ResultSet resultado) throws SQLException {
+    public ObservableList<Cliente> construirLista(ResultSet resultado) throws SQLException {
         ObservableList<Cliente> clientes = FXCollections.observableArrayList();//crear el array;
         while (resultado.next()) {
             //Esxtraer las columnas de la tabla
@@ -47,7 +47,7 @@ public class ConstructorDeObjetoCliente implements ConstructorDeObjeto {
      * @throws SQLException
      */
     @Override
-    public Cliente contruirObjeto(ResultSet resultado) throws SQLException {
+    public Cliente construirObjeto(ResultSet resultado) throws SQLException {
         while (resultado.next()) {
             //Esxtraer las columnas de la tabla
             int nit = resultado.getInt("nit");

@@ -405,9 +405,9 @@ INSERT INTO RegistroVentas.Cliente VALUES (1010101, 'Edson Prieto', 23467678);
 INSERT INTO RegistroVentas.Cliente VALUES (9090909, 'Efrain Rios', 23425663);
 INSERT INTO RegistroVentas.Cliente VALUES (5858585, 'Ismael Prego', 23423526);
 INSERT INTO RegistroVentas.Cliente VALUES (1231234, 'Nancy Ramirez', 23456565);
-INSERT INTO RegistroVentas.Cliente VALUES (8888887, 'Paola Sosa', 23432467);
-INSERT INTO RegistroVentas.Cliente VALUES (0005512, 'Nancy Madrid', 78546742);
-INSERT INTO RegistroVentas.Cliente VALUES (0000000, 'CF', 00000000);
+INSERT INTO RegistroVentas.Cliente VALUES (8888887, 'Paola Sosa',    23432467);
+INSERT INTO RegistroVentas.Cliente VALUES (0005512, 'Nancy Madrid',  78546742);
+INSERT INTO RegistroVentas.Cliente VALUES (0, 'CF', 0);
 
 ----------------------------- VENTAS SUCURSAL CENTRAL -----------------------------
 

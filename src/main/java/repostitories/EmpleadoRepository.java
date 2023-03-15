@@ -15,13 +15,7 @@ import models.Empleado;
  *
  * @author Luis Monterroso
  */
-public class EmpleadoRepository {
-
-    private ContstructorDeObjetoEmpleado contstructorDeObjetoEmpleado;
-
-    public EmpleadoRepository() {
-        this.contstructorDeObjetoEmpleado = new ContstructorDeObjetoEmpleado();
-    }
+public class EmpleadoRepository extends ContstructorDeObjetoEmpleado{
 
     /**
      * Se comunica con la base de datos y obtiene un Empleado a partir de su
@@ -37,7 +31,7 @@ public class EmpleadoRepository {
             pr.setString(1, empleado.getUsuario());//damos valores a los ?
             pr.setString(2, empleado.getPassword());
             ResultSet resultado = pr.executeQuery();//ejecutar query
-            return contstructorDeObjetoEmpleado.contruirObjeto(resultado);
+            return construirObjeto(resultado);
         } catch (SQLException ex) {
             return null;
         }

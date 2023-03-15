@@ -26,19 +26,19 @@ public class EmpleadoService {
      * @param empleadoDTO
      * @return Correcto: Si el usuario existe en la base de datos. Mensaje de
      * fallo: Si el usuario no se encuentra en la base de datos.
-     * @throws java.lang.Exception si la busqueda fallo o las credenciales son invalidas.
+     * @throws java.lang.Exception si la busqueda fallo o las credenciales son
+     * invalidas.
      */
-    public Empleado login(Empleado empleadoDTO) throws Exception{
+    public Empleado login(Empleado empleadoDTO) throws Exception {
         //si los parametros no estan en blanco instanciamos el metodo autenticador del repositorio
-        if (!empleadoDTO.getUsuario().isBlank() && !empleadoDTO.getPassword().isBlank()) {
-            //si al buscar el usuario devuelve null, las credenciales son incorrectas o el usuairo no existe.
-            Empleado empleado = empleadoRepository.traerEmpleadoPorUsuarioYPassword(empleadoDTO);
-            if (empleado == null) {
-                throw new Exception("Credenciales incorrectas.");
-            }
-            return empleado;
-        } else {
+        if (empleadoDTO.getUsuario().isBlank() || empleadoDTO.getPassword().isBlank()) {
             throw new Exception("Credenciales invalidas o vacías.");
         }
+        //si al buscar el usuario devuelve null, las credenciales son incorrectas o el usuairo no existe.
+        Empleado empleado = empleadoRepository.traerEmpleadoPorUsuarioYPassword(empleadoDTO);
+        if (empleado == null) {
+            throw new Exception("Credenciales incorrectas.");
+        }
+        return empleado;
     }
 }

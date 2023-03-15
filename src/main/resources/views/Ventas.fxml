@@ -5,6 +5,7 @@
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
 <?import java.net.URL?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -75,7 +76,7 @@
                               <MFXDatePicker fx:id="txtFecha" floatMode="INLINE" floatingText="Fecha" layoutX="102.0" layoutY="381.0" />
                               <MFXTextField fx:id="txtTotal" allowEdit="false" floatMode="ABOVE" floatingText="Total" layoutX="483.0" layoutY="164.0" prefHeight="55.0" prefWidth="202.0" />
                               <MFXTextField fx:id="txtNumItems" allowEdit="false" floatMode="ABOVE" floatingText="Numero de items" layoutX="483.0" layoutY="297.0" prefHeight="55.0" prefWidth="202.0" />
-                              <MFXButton fx:id="btnPagar" buttonType="RAISED" contentDisplay="RIGHT" depthLevel="LEVEL1" graphicTextGap="20.0" layoutX="421.0" layoutY="374.0" prefHeight="50.0" prefWidth="326.0" rippleColor="#76ff03" text="Pagar">
+                              <MFXButton fx:id="btnPagar" buttonType="RAISED" contentDisplay="RIGHT" depthLevel="LEVEL1" graphicTextGap="20.0" layoutX="421.0" layoutY="374.0" onAction="#pagar" prefHeight="50.0" prefWidth="326.0" rippleColor="#76ff03" text="Pagar">
                                  <graphic>
                                     <ImageView fitHeight="38.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -83,6 +84,9 @@
                                        </image>
                                     </ImageView>
                                  </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </MFXButton>
                               <MFXToggleButton fx:id="toggleCF" contentDisposition="RIGHT" layoutX="101.0" layoutY="45.0" onAction="#cambiarEstadoCF" text="CF">
                                  <font>

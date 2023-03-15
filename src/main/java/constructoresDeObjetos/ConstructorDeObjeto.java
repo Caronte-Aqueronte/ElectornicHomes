@@ -21,7 +21,7 @@ public interface ConstructorDeObjeto {
      * @return Lista de objetos creada.
      * @throws SQLException
      */
-    public Object contruirLista(ResultSet resultado) throws SQLException;
+    public Object construirLista(ResultSet resultado) throws SQLException;
 
     /**
      * Los metodos deberan ser capaces de construir un objeto a partir de un
@@ -31,6 +31,6 @@ public interface ConstructorDeObjeto {
      * @return El objeto construido
      * @throws SQLException
      */
-    public Object contruirObjeto(ResultSet resultado) throws SQLException;
+    public Object construirObjeto(ResultSet resultado) throws SQLException;
 
 }
