@@ -4,6 +4,7 @@
  */
 package constructoresDeObjetos;
 
+import dto.BodegaDTO;
 import dto.ProductoDTO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,48 +15,45 @@ import javafx.collections.ObservableList;
  *
  * @author Luis Monterroso
  */
-public class ConstructorDeObjetoProductoDTO implements ConstructorDeObjeto {
-
-    /**
-     * Crea una lista de objetos ProductoDTO a partir de un ResultSet.
+public class ConstructorDeObjetoBodegaDTO implements ConstructorDeObjeto{
+        /**
+     * Crea una lista de objetos BodegaDTO a partir de un ResultSet.
      *
      * @param resultado
-     * @return Lista de Objetos ProductoDTO.
+     * @return Lista de Objetos BodegaDTO.
      * @throws SQLException
      */
     @Override
-    public ObservableList<ProductoDTO> construirLista(ResultSet resultado) throws SQLException {
-        ObservableList<ProductoDTO> productos = FXCollections.observableArrayList();
+    public ObservableList<BodegaDTO> construirLista(ResultSet resultado) throws SQLException {
+        ObservableList<BodegaDTO> productos = FXCollections.observableArrayList();
         while (resultado.next()) {
             //Esxtraer las columnas de la tabla
             int codigoBarras = resultado.getInt("codigo_barras");
             String nombre = resultado.getString("nombre");
             double precioVenta = resultado.getDouble("precio_venta");
-            String sucursal = resultado.getString("sucursal");
             //apartir de la extraccion de datos crear un nuevo objeto ProductoDTO
-            ProductoDTO producto = new ProductoDTO(codigoBarras, nombre, precioVenta, sucursal);
+            BodegaDTO producto = new BodegaDTO(codigoBarras, nombre, precioVenta);
             productos.add(producto);//agregamos a la lista el objeto creado
         }
         return productos;
     }
 
     /**
-     * Crea un objeto ProductoDTO a partir de un ResultSet
+     * Crea un objeto BodegaDTO a partir de un ResultSet
      *
      * @param resultado
-     * @return El objeto ProductoDTO.
+     * @return El objeto BodegaDTO.
      * @throws SQLException
      */
     @Override
-    public ProductoDTO construirObjeto(ResultSet resultado) throws SQLException {
+    public BodegaDTO construirObjeto(ResultSet resultado) throws SQLException {
         while (resultado.next()) {
             //Esxtraer las columnas de la tabla
             int codigoBarras = resultado.getInt("codigo_barras");
             String nombre = resultado.getString("nombre");
             double precioVenta = resultado.getDouble("precio_venta");
-            String sucursal = resultado.getString("sucursal");
             //apartir de la extraccion de datos crear un nuevo objeto ProductoDTO
-            return new ProductoDTO(codigoBarras, nombre, precioVenta, sucursal);
+            return new BodegaDTO(codigoBarras, nombre, precioVenta);
         }
         return null;
     }

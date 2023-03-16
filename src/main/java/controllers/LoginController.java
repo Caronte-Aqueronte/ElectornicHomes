@@ -27,7 +27,7 @@ import services.EmpleadoService;
  *
  * @author Luis Monterroso
  */
-public class LoginController implements Initializable {
+public class LoginController extends Controller implements Initializable {
 
     public static Empleado empleadoLogeado;
     private EmpleadoService empleadoService;
@@ -77,9 +77,10 @@ public class LoginController implements Initializable {
     private void elegirMenu(Empleado empleado) {
         switch (empleado.getRol()) {
             case "VENDEDOR":
-                abrirMenu("MenuVendedor", empleado);
+                abrirMenu("MenuVendedor", this.btnEntrar);
                 break;
             case "INVENTARIO":
+                abrirMenu("MenuInventario", this.btnEntrar);
                 break;
             case "BODEGA":
                 break;
@@ -92,28 +93,5 @@ public class LoginController implements Initializable {
         }
     }
 
-    /**
-     * Abre el menu que recibe como parametro. Ademas.
-     *
-     * @param menu
-     * @param info
-     */
-    private void abrirMenu(String menu, Empleado info) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/" + menu + ".fxml"));//cargamos el menu
-            Parent parent = loader.load();//crear un pareinte
-            Scene scene = new Scene(parent);//creamos la vista con el pareitne
-            Stage stage = new Stage();//cremos la ventana
-            stage.setScene(scene);
-            stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/aparato-electrico.png")));//le damos un icono a la ventana
-            stage.show();//ensenamos la ventana
-            stage.setMaximized(true);//la maximizamos
-            //codigo para cerrar la ventana actual
-            Stage stageActual = (Stage) this.btnEntrar.getScene().getWindow();//obtenemos la ventana actual
-            stageActual.close();//cerramos la ventana actual
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
 
 }

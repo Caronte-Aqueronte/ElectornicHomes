@@ -113,8 +113,9 @@ public class VentasController implements Initializable {
     private void mostrarInventarioDeLaSucursal() {
         Empleado empleado = LoginController.empleadoLogeado;
         //mandamos a buscar el inventario de la sucursal del empleado
-        ObservableList<ProductoDTO> inventario = productoDTOService.buscarProductoDtoPorCodigoBarras(empleado.getSucursal());
+        ObservableList<ProductoDTO> inventario = productoDTOService.mostrarInventarioDeSucursal(empleado.getSucursal());
         tablaInventario.setItems(inventario);
+        tablaInventario.refresh();
     }
 
     /**

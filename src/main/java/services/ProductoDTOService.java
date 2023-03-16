@@ -21,11 +21,63 @@ public class ProductoDTOService {
     }
 
     /**
-     * Invoca el metodo de ProductoDTORepository que es capaz de mostrar el invnetario de una sucursal.
+     * Invoca el metodo de ProductoDTORepository que es capaz de mostrar el
+     * invnetario de una sucursal.
+     *
      * @param sucursal
-     * @return 
+     * @return
      */
-    public ObservableList<ProductoDTO> buscarProductoDtoPorCodigoBarras(String sucursal) {
+    public ObservableList<ProductoDTO> mostrarInventarioDeSucursal(String sucursal) {
         return productoDTORepository.mostrarProductosDtoPorSucursal(sucursal);
     }
+
+    /**
+     * Invoca el metodo de ProductoDTORepository que es capaz de mostrar el
+     * producto por el codigoDeBarras y la sucursal del Empleado.
+     *
+     * @param sucursal
+     * @param codigoBarras
+     * @return
+     */
+    public ObservableList<ProductoDTO> buscarProductoDtoPorCodigoBarras(String sucursal, String codigoBarras) {
+        return productoDTORepository.buscarProductoPorCodigoDeBarrasYSucursal(sucursal, codigoBarras);
+    }
+
+    /**
+     * Invoca el metodo de ProductoDTORepository que es capaz de mostrar el el
+     * inventario de las sucursales.
+     *
+     * @return
+     */
+    public ObservableList<ProductoDTO> mostrarProductosDtoDeSucursales() {
+        return productoDTORepository.mostrarProductosDtoDeSucursales();
+    }
+
+    /**
+     * Invoca el metodo de ProductoDTORepository que es capaz de mostrar el
+     * producto buscado en el inventario de las sucursales.
+     *
+     * @param codigo
+     * @return
+     */
+    public ObservableList<ProductoDTO> buscarProductoPorCodigoDeBarras(String codigo) {
+        return productoDTORepository.buscarProductoPorCodigoDeBarras(codigo);
+    }
+
+    /**
+     * Invoca el metodo cambiarProductoDeSucursal de ProductoDTORepository para
+     * cambiar un producto de sucursal.
+     *
+     * @param producto
+     * @param sucursal
+     * @return
+     * @throws Exception
+     */
+    public String cambiarProductoDeSucursal(ProductoDTO producto, String sucursal) throws Exception {
+        if (!productoDTORepository.cambiarProductoDeSucursal(producto, sucursal)) {
+            throw new Exception("El producto no se cambió de sucursal.");
+        }
+        return "El producto se cambió con éxito de sucursal.";
+    }
+
 }

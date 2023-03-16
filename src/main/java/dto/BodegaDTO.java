@@ -8,29 +8,19 @@ package dto;
  *
  * @author Luis Monterroso
  */
-public class ProductoDTO {
+public class BodegaDTO {
 
     private int codigoBarras;
     private String nombre;
     private double precioVenta;
-    private String sucursal;
 
-    public ProductoDTO(int codigoBarras, String nombre, double precioVenta, String sucursal) {
+    public BodegaDTO(int codigoBarras, String nombre, double precioVenta) {
         this.codigoBarras = codigoBarras;
         this.nombre = nombre;
         this.precioVenta = precioVenta;
-        this.sucursal = sucursal;
     }
 
-    public String getSucursal() {
-        return sucursal;
-    }
-
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
-    }
-
-   public int getCodigoBarras() {
+    public int getCodigoBarras() {
         return codigoBarras;
     }
 
@@ -53,5 +43,6 @@ public class ProductoDTO {
     public void setPrecioVenta(double precioVenta) {
         this.precioVenta = precioVenta;
     }
-
+    
+    
 }
