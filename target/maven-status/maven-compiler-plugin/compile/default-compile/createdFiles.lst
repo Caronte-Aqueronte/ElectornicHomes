@@ -1,4 +1,5 @@
 constructoresDeObjetos\ConstructorDeObjetoVenta.class
+controllers\MenuBodegaController.class
 controllers\LoginController.class
 controllers\ClientesController.class
 constructoresDeObjetos\ConstructorDeObjetoCliente.class
@@ -7,6 +8,7 @@ controllers\ClientesController$1.class
 config\App.class
 controllers\MenuVendedorController.class
 controllers\VentasController$1.class
+controllers\PedidosController$2.class
 services\VentaService.class
 repostitories\ProductoDTORepository.class
 services\ClienteService.class
@@ -16,15 +18,21 @@ constructoresDeObjetos\ContstructorDeObjetoEmpleado.class
 repostitories\EmpleadoRepository.class
 services\EmpleadoService.class
 dto\ProductoDTO.class
+controllers\PedidosController$1.class
+controllers\PedidosController.class
+controllers\InventarioController.class
 models\Compra.class
 models\Sucursal.class
+controllers\MenuInventarioController.class
 config\Starter.class
 models\Empleado.class
 constructoresDeObjetos\ConstructorDeObjetoProductoDTO.class
+controllers\EditarClienteController.class
 repostitories\ClienteRepository.class
 repostitories\VentaRepository.class
 models\Cliente.class
 models\Venta.class
 config\Conector.class
+controllers\Controller.class
 services\ProductoDTOService.class
 controllers\VentasController$2.class

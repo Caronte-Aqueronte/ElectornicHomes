@@ -83,6 +83,7 @@ public class LoginController extends Controller implements Initializable {
                 abrirMenu("MenuInventario", this.btnEntrar);
                 break;
             case "BODEGA":
+                abrirMenu("MenuBodega", this.btnEntrar);
                 break;
             case "ADMINISTRACION":
                 break;

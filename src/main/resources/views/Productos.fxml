@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" minHeight="594.0" minWidth="833.0" prefHeight="594.0" prefWidth="902.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.ProductosController">
+    <stylesheets>
+        <URL value="@/styles/productos.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tablaProductos" layoutX="17.0" layoutY="106.0" prefHeight="445.0" prefWidth="799.0" stylesheets="@../styles/tables.css" AnchorPane.bottomAnchor="42.39999999999998" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.799999999999955" AnchorPane.topAnchor="106.0">
+         <columns>
+            <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre del producto" />
+            <TableColumn fx:id="colDescripcion" prefWidth="75.0" text="Descripción" />
+            <TableColumn fx:id="colPrecioCompra" prefWidth="75.0" text="Precio compra" />
+            <TableColumn fx:id="colPrecioVenta" prefWidth="75.0" text="Precio venta" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <MFXTextField fx:id="txtBuscar" floatMode="BORDER" floatingText="Buscar producto por nombre" layoutX="29.0" layoutY="43.0" onKeyReleased="#buscarProducto" prefHeight="50.0" prefWidth="261.0" />
+      <ImageView fx:id="btnAgregar" fitHeight="50.0" fitWidth="45.0" layoutX="735.0" layoutY="46.0" onMouseClicked="#abrirMenuInsertar" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="53.0">
+         <image>
+            <Image url="@../img/agregar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

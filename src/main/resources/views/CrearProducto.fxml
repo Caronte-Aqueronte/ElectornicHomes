@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="569.0" prefWidth="448.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.CrearProductoController">
+    <stylesheets>
+        <URL value="@/styles/crearproducto.css" />
+    </stylesheets>
+   <children>
+      <MFXTextField fx:id="txtNombre" floatMode="BORDER" floatingText="Nombre del producto" layoutX="89.0" layoutY="59.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <TextArea fx:id="txtDescripcion" layoutX="89.0" layoutY="138.0" prefHeight="146.0" prefWidth="266.0" promptText="Descripcion" style="-fx-focus-color: rgb(122,14,217); -fx-faint-focus-color: transparent;" wrapText="true">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextArea>
+      <MFXTextField fx:id="txtPrecioCompra" floatMode="BORDER" floatingText="Precio compra" layoutX="88.0" layoutY="313.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXTextField fx:id="txtPrecioVenta" floatMode="BORDER" floatingText="Precio venta" layoutX="88.0" layoutY="400.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXButton fx:id="btnEditar" buttonType="RAISED" depthLevel="LEVEL4" layoutX="88.0" layoutY="482.0" onAction="#crearProducto" prefHeight="50.0" prefWidth="266.0" rippleColor="#76ff03" text="Crear producto">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+   </children>
+</AnchorPane>

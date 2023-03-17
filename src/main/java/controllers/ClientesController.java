@@ -132,7 +132,7 @@ public class ClientesController implements Initializable {
             stage.setScene(scene);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/aparato-electrico.png")));//le damos un icono a la ventana   
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Edicion de clientes.");
+            stage.setTitle("Edicion de clientes");
             stage.showAndWait();//ensenamos la ventana
             //luego de abrir la ventana de edicion podemos actualizar la tabla
             mostrarClientes();

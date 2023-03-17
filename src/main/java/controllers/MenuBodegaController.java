@@ -16,7 +16,7 @@ import javafx.fxml.Initializable;
  *
  * @author Luis Monterroso
  */
-public class MenuInventarioController extends Controller implements Initializable {
+public class MenuBodegaController extends Controller implements Initializable {
 
     @FXML
     private MFXScrollPane panelContenedor;
@@ -26,16 +26,27 @@ public class MenuInventarioController extends Controller implements Initializabl
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //se configura el scrollpane para que el contenido se auto ajuste al tamanio del mismo
-        panelContenedor.setFitToHeight(true);
+        // TODO
         panelContenedor.setFitToWidth(true);
+        panelContenedor.setFitToHeight(true);
+    }    
+
+    @FXML
+    private void abrirBodega(ActionEvent event) {
+        
     }
 
-    private void abrirInventario(ActionEvent event) {
-        abrirMenuEnScrollPane(panelContenedor, "Inventario", panelContenedor);
+    @FXML
+    private void abrirCompras(ActionEvent event) {
     }
 
-    private void abrirPedidos(ActionEvent event) {
-        abrirMenuEnScrollPane(panelContenedor, "Pedidos", panelContenedor);
+    @FXML
+    private void abrirIngresos(ActionEvent event) {
     }
+
+    @FXML
+    private void abrirProductos(ActionEvent event) {
+        this.abrirMenuEnScrollPane(panelContenedor, "Productos", panelContenedor);
+    }
+    
 }
