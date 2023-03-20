@@ -1,7 +1,9 @@
+D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjetoCompra.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\BodegaDTOService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\VentasController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\config\App.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\repostitories\EmpleadoRepository.java
+D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\BodegaController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\MenuBodegaController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\EmpleadoService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjetoCliente.java
@@ -12,10 +14,12 @@ D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\Logi
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\ProductoDTOService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjetoProducto.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjetoProductoDTO.java
+D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\EditarBodegaController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\InventarioController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\dto\BodegaDTO.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\EditarClienteController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\config\Starter.java
+D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\CompraService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\ProductoService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\dto\ProductoDTO.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\models\Sucursal.java
@@ -27,6 +31,7 @@ D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\repostitories\Bo
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjeto.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\models\Empleado.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\models\Venta.java
+D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\repostitories\CompraRepository.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\PedidosController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\models\Cliente.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\CrearProductoController.java
@@ -35,6 +40,7 @@ D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\VentaSe
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\ClientesController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\config\Conector.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjetoBodegaDTO.java
+D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\InsertarBodegaController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\MenuVendedorController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\ClienteService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\MenuInventarioController.java

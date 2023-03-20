@@ -80,6 +80,34 @@ public abstract class Controller {
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/aparato-electrico.png")));//le damos un icono a la ventana
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle(titulo);
+            stage.setResizable(false);
+            stage.showAndWait();//ensenamos la ventana
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    /**
+     * Abre la una vista en modo dialog y le adjunta un controlador
+     * personalizado.
+     *
+     * @param controller
+     * @param titulo
+     * @param vista
+     */
+    protected void abrirDialogConControlador(Object controller, String titulo, String vista) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/" + vista + ".fxml"));//cargamos el menu
+            loader.setController(controller);
+            Parent parent = loader.load();//crear un pareinte
+            Scene scene = new Scene(parent);//creamos la vista con el pareitne
+            Stage stage = new Stage();//cremos la ventana
+            stage.setScene(scene);
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/aparato-electrico.png")));//le damos un icono a la ventana   
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle(titulo);
+            stage.setResizable(false);
             stage.showAndWait();//ensenamos la ventana
 
         } catch (IOException ex) {

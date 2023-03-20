@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="359.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/editarbodega.css" />
+    </stylesheets>
+   <children>
+      <MFXTextField fx:id="txtCodigoBarras" floatingText="Codigo de barras" layoutX="46.0" layoutY="86.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXDatePicker fx:id="txtFecha" floatingText="Fecha" layoutX="46.0" layoutY="177.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXDatePicker>
+      <MFXButton fx:id="btnInsertar" buttonType="RAISED" depthLevel="LEVEL4" layoutX="46.0" layoutY="343.0" onAction="#editarBodega" prefHeight="50.0" prefWidth="266.0" rippleColor="#03a9f4" text="Editar bodega">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <MFXComboBox fx:id="comboProducto" floatMode="BORDER" floatingText="Producto" layoutX="46.0" layoutY="267.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXComboBox>
+   </children>
+</AnchorPane>

@@ -5,16 +5,12 @@
 package controllers;
 
 import io.github.palexdev.materialfx.controls.MFXScrollPane;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class

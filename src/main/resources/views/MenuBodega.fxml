@@ -15,9 +15,9 @@
       <URL value="@/styles/menuinventario.css" />
    </stylesheets>
    <children>
-      <Pane prefHeight="591.0" prefWidth="246.0" styleClass="pane" stylesheets="@../styles/menuinventario.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane prefHeight="591.0" prefWidth="246.0" styleClass="pane" stylesheets="@../styles/menubodega.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button graphicTextGap="20.0" layoutY="184.0" mnemonicParsing="false" onAction="#abrirBodega" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuinventario.css" text="Bodega" textFill="WHITE">
+            <Button graphicTextGap="20.0" layoutY="313.0" mnemonicParsing="false" onAction="#abrirBodega" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuinventario.css" text="Bodega" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -32,37 +32,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="CENTER" graphicTextGap="20.0" layoutY="260.0" mnemonicParsing="false" onAction="#abrirCompras" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Compras" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <graphic>
-                  <ImageView fitHeight="48.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/carrito.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="CENTER" graphicTextGap="20.0" layoutY="342.0" mnemonicParsing="false" onAction="#abrirIngresos" prefHeight="60.0" prefWidth="246.0" styleClass="boton" text="Ingresos" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <graphic>
-                  <ImageView fitHeight="48.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/inventario.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="CENTER" graphicTextGap="20.0" layoutY="105.0" mnemonicParsing="false" onAction="#abrirProductos" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Catalogo" textFill="WHITE">
+            <Button alignment="CENTER" graphicTextGap="20.0" layoutY="234.0" mnemonicParsing="false" onAction="#abrirProductos" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Catalogo" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>

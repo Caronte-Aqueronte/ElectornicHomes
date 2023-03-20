@@ -31,19 +31,20 @@ public class MenuBodegaController extends Controller implements Initializable {
         panelContenedor.setFitToHeight(true);
     }    
 
+    /**
+     * Utiliza abrirMenuEnScrollPane para abrir la vista Bodega.fxml dentro de MFXScrollPane panelContenedor.
+     * @param event 
+     */
     @FXML
     private void abrirBodega(ActionEvent event) {
+        this.abrirMenuEnScrollPane(panelContenedor, "Bodega", panelContenedor);
         
     }
 
-    @FXML
-    private void abrirCompras(ActionEvent event) {
-    }
-
-    @FXML
-    private void abrirIngresos(ActionEvent event) {
-    }
-
+    /**
+     * Utiliza abrirMenuEnScrollPane para abrir la vista Productos.fxml dentro de MFXScrollPane panelContenedor.
+     * @param event 
+     */
     @FXML
     private void abrirProductos(ActionEvent event) {
         this.abrirMenuEnScrollPane(panelContenedor, "Productos", panelContenedor);

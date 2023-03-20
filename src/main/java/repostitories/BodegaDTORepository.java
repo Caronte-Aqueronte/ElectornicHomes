@@ -7,12 +7,14 @@ package repostitories;
 import config.Conector;
 import constructoresDeObjetos.ConstructorDeObjetoBodegaDTO;
 import dto.BodegaDTO;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import models.Compra;
 
 /**
  *

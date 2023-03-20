@@ -43,6 +43,12 @@ public class CrearProductoController implements Initializable {
         this.productoService = new ProductoService();
     }
 
+    /**
+     * Obtiene las entradas en los TextFields, crea un Producto y lo envia a
+     * insertar por medio de insertarProducto() de ProductoService.
+     *
+     * @param event
+     */
     @FXML
     private void crearProducto(ActionEvent event) {
         try {
@@ -61,8 +67,11 @@ public class CrearProductoController implements Initializable {
         }
 
     }
-    
-    private void eliminarCampos(){
+
+    /**
+     * Elimina el texto de los TextFields cambiando el texto por texto vacio.
+     */
+    private void eliminarCampos() {
         txtNombre.setText("");
         txtDescripcion.setText("");
         txtPrecioCompra.setText("");

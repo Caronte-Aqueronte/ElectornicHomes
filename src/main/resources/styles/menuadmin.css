@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.pane{
+    -fx-background-color: #E040FB;
+}
+
+.button{
+    -fx-border-radius: 0 50 50 0;
+    -fx-background-radius: 0 50 50 0;
+    -fx-background-color: #7B1FA2;
+}

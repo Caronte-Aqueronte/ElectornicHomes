@@ -75,6 +75,9 @@ public class InventarioController implements Initializable {
         tablaInventario.refresh();
     }
 
+    /**
+     * Le da un modelo a las TableColumn de la tablaInventario
+     */
     private void darModeloATabla() {
         //le estamos dando modelos a la tabla de Inventario
         codugoBarrasColumn.setCellValueFactory(new PropertyValueFactory("codigoBarras"));

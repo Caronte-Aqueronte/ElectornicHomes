@@ -8,8 +8,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="594.0" minWidth="833.0" prefHeight="594.0" prefWidth="902.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.ProductosController">
+<AnchorPane id="AnchorPane" minHeight="594.0" minWidth="833.0" prefHeight="594.0" prefWidth="902.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductosController">
     <stylesheets>
         <URL value="@/styles/productos.css" />
     </stylesheets>
@@ -25,7 +26,10 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <MFXTextField fx:id="txtBuscar" floatMode="BORDER" floatingText="Buscar producto por nombre" layoutX="29.0" layoutY="43.0" onKeyReleased="#buscarProducto" prefHeight="50.0" prefWidth="261.0" />
+      <MFXTextField fx:id="txtBuscar" floatMode="BORDER" floatingText="Buscar producto por nombre" layoutX="29.0" layoutY="43.0" onKeyReleased="#buscarProducto" prefHeight="50.0" prefWidth="261.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></MFXTextField>
       <ImageView fx:id="btnAgregar" fitHeight="50.0" fitWidth="45.0" layoutX="735.0" layoutY="46.0" onMouseClicked="#abrirMenuInsertar" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="53.0">
          <image>
             <Image url="@../img/agregar.png" />

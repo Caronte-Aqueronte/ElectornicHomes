@@ -59,5 +59,10 @@ public class Producto {
         this.precioVenta = precioVenta;
     }
     
+    @Override
+    public String toString(){
+        return this.nombre;
+    }
+    
     
 }

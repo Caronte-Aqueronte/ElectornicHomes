@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="395.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.InsertarBodegaController">
+    <stylesheets>
+        <URL value="@/styles/insertarbodega.css" />
+    </stylesheets>
+   <children>
+      <MFXTextField fx:id="txtCodigoBarras" floatingText="Codigo de barras" layoutX="65.0" layoutY="86.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXDatePicker fx:id="txtFecha" floatingText="Fecha" layoutX="65.0" layoutY="166.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXDatePicker>
+      <MFXButton fx:id="btnInsertar" buttonType="RAISED" depthLevel="LEVEL4" layoutX="65.0" layoutY="354.0" onAction="#insertarEnBodega" prefHeight="50.0" prefWidth="266.0" rippleColor="#76ff03" text="Insertar en bodega">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <MFXComboBox fx:id="comboProducto" floatMode="BORDER" floatingText="Producto" layoutX="65.0" layoutY="253.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXComboBox>
+   </children>
+</AnchorPane>

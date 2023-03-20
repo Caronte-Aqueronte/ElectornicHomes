@@ -55,5 +55,5 @@ public class BodegaDTOService {
         }
         return "Se ingresó el producto al inventario de la sucursal " + sucursal;
     }
-
+    
 }

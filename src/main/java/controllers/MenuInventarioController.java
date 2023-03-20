@@ -31,10 +31,22 @@ public class MenuInventarioController extends Controller implements Initializabl
         panelContenedor.setFitToWidth(true);
     }
 
+    /**
+     * Utiliza abrirMenuEnScrollPane para abrir la vista Inventario.fxml dentro
+     * de MFXScrollPane panelContenedor.
+     *
+     * @param event
+     */
     private void abrirInventario(ActionEvent event) {
         abrirMenuEnScrollPane(panelContenedor, "Inventario", panelContenedor);
     }
 
+    /**
+     * Utiliza abrirMenuEnScrollPane para abrir la vista Pedidos.fxml dentro de
+     * MFXScrollPane panelContenedor.
+     *
+     * @param event
+     */
     private void abrirPedidos(ActionEvent event) {
         abrirMenuEnScrollPane(panelContenedor, "Pedidos", panelContenedor);
     }

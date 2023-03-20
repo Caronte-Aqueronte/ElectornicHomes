@@ -12,7 +12,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.shape.Cylinder;
 import javafx.stage.Stage;
 import models.Cliente;
 import services.ClienteService;
@@ -42,20 +41,35 @@ public class EditarClienteController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         //cargamos los parametros del cliente a editar
         cargarLaInfoDelCliente();
-         this.clienteService = new ClienteService();
+        this.clienteService = new ClienteService();
     }
 
+    /**
+     * Setea el texto de los TextFields con los atributos del cliente
+     * seleccionado para edicion.
+     */
     public void cargarLaInfoDelCliente() {
         txtNit.setText(String.valueOf(cliente.getNit()));
         txtNombre.setText(cliente.getNombre());
         txtTelefono.setText(String.valueOf(cliente.getTelefono()));
     }
 
+    /**
+     * Setea cliente con el objeto enviado.
+     *
+     * @param cliente
+     */
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-      
+
     }
 
+    /**
+     * Recauda las entradas de los TextFields, crea un objeto Cliente, envia a
+     * editar al cliente en base a la nueva infomacion y su nit actual.
+     *
+     * @param event
+     */
     @FXML
     private void editarCliente(ActionEvent event) {
         try {

@@ -17,7 +17,7 @@
    <children>
       <Pane prefHeight="590.0" prefWidth="246.0" styleClass="pane" stylesheets="@../styles/menuvendedor.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="btnVentas" graphicTextGap="20.0" layoutY="226.0" mnemonicParsing="false" onAction="#abrirMenuVentas" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Ventas" textFill="WHITE">
+            <Button fx:id="btnVentas" graphicTextGap="20.0" layoutY="216.0" mnemonicParsing="false" onAction="#abrirMenuVentas" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Ventas" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -32,7 +32,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnClientes" alignment="CENTER" graphicTextGap="20.0" layoutY="302.0" mnemonicParsing="false" onAction="#abrirMenuClientes" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Clientes" textFill="WHITE">
+            <Button fx:id="btnClientes" alignment="CENTER" graphicTextGap="20.0" layoutY="292.0" mnemonicParsing="false" onAction="#abrirMenuClientes" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Clientes" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>

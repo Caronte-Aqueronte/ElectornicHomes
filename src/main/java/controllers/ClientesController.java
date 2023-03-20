@@ -5,17 +5,13 @@
 package controllers;
 
 import io.github.palexdev.materialfx.controls.MFXTextField;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Cursor;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -25,8 +21,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import javafx.util.Callback;
 import models.Cliente;
 import services.ClienteService;
@@ -36,7 +30,7 @@ import services.ClienteService;
  *
  * @author Luis Monterroso
  */
-public class ClientesController implements Initializable {
+public class ClientesController extends Controller implements Initializable {
 
     private ClienteService clienteService;
     @FXML
@@ -62,6 +56,9 @@ public class ClientesController implements Initializable {
         mostrarClientes();
     }
 
+    /**
+     * Da un modelo a las columnas de la tabla y adjunta el boton editar.S
+     */
     private void darModeloATabla() {
         //le estamos dando modelos a la tabla de Clientes
         nitColumn.setCellValueFactory(new PropertyValueFactory("nit"));
@@ -120,29 +117,21 @@ public class ClientesController implements Initializable {
     private void cargarVentanaDeEdicion() {
         //obtenemos el cliente que se desea editar
         Cliente clienteEditar = tableClientes.getSelectionModel().getSelectedItem();
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/EditarCliente.fxml"));//cargamos el menu
-            EditarClienteController editarClienteController = new EditarClienteController();
-            editarClienteController.setCliente(clienteEditar);
-            loader.setController(editarClienteController);
-
-            Parent parent = loader.load();//crear un pareinte
-            Scene scene = new Scene(parent);//creamos la vista con el pareitne
-            Stage stage = new Stage();//cremos la ventana
-            stage.setScene(scene);
-            stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/aparato-electrico.png")));//le damos un icono a la ventana   
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Edicion de clientes");
-            stage.showAndWait();//ensenamos la ventana
-            //luego de abrir la ventana de edicion podemos actualizar la tabla
-            mostrarClientes();
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
+        //creamos el controlador
+        EditarClienteController editarClienteController = new EditarClienteController();
+        editarClienteController.setCliente(clienteEditar);
+        //mandamos a abrir la vista con el controlador creado
+        this.abrirDialogConControlador(editarClienteController, "Edición de clientes", "EditarCliente");
+        //luego de abrir la ventana de edicion podemos actualizar la tabla
+        mostrarClientes();
     }
 
+    /**
+     * Captura el tecleo dentro del txtBuscar, captura la entrada y manda a
+     * buscar el producto el cliente.
+     *
+     * @param event
+     */
     @FXML
     private void buscarCliente(KeyEvent event) {
         String busqueda = txtBuscar.getText();
