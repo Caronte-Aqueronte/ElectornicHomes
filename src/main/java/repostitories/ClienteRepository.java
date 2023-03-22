@@ -32,7 +32,7 @@ public class ClienteRepository extends ConstructorDeObjetoCliente {
         String query = "SELECT * FROM RegistroVentas.Cliente WHERE nit = ? AND nit != ?;";
         try (PreparedStatement ps = Conector.CONEXION.prepareStatement(query)) {
             ps.setLong(1, nit);
-            ps.setLong(1, 0);
+            ps.setLong(2, 0);
             ResultSet resultado = ps.executeQuery();
             return construirObjeto(resultado);
         } catch (SQLException ex) {

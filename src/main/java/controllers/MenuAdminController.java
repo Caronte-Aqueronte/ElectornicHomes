@@ -4,8 +4,11 @@
  */
 package controllers;
 
+import io.github.palexdev.materialfx.controls.MFXScrollPane;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -13,7 +16,10 @@ import javafx.fxml.Initializable;
  *
  * @author Luis Monterroso
  */
-public class MenuAdminController implements Initializable {
+public class MenuAdminController extends Controller implements Initializable {
+
+    @FXML
+    private MFXScrollPane panelContenedor;
 
     /**
      * Initializes the controller class.
@@ -22,5 +28,14 @@ public class MenuAdminController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void abrirReportes(ActionEvent event) {
+    }
+
+    @FXML
+    private void abrirTrabajadores(ActionEvent event) {
+        this.abrirMenuEnScrollPane(panelContenedor, "Trabajadores", panelContenedor);
+    }
     
 }

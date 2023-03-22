@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="530.0" minWidth="862.0" prefHeight="614.0" prefWidth="877.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.TrabajadoresController">
+    <stylesheets>
+        <URL value="@/styles/trabajadores.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tablaEmpleados" layoutX="26.0" layoutY="151.0" prefHeight="439.0" prefWidth="825.0" stylesheets="@../styles/tables.css" AnchorPane.bottomAnchor="23.80000000000001" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="25.399999999999977" AnchorPane.topAnchor="151.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="164.0" text="Id" />
+            <TableColumn fx:id="colNombre" prefWidth="164.0" text="Nombre" />
+            <TableColumn fx:id="colSucursal" prefWidth="75.0" text="Sucursal" />
+            <TableColumn fx:id="colRol" prefWidth="75.0" text="Rol" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <MFXTextField fx:id="txtBuscarEmpleado" floatingText="Buscar empleado por nombre" layoutX="26.0" layoutY="69.0" onKeyReleased="#buscarEmpleado" prefHeight="50.0" prefWidth="353.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <ImageView fx:id="btnAgregar" fitHeight="50.0" fitWidth="45.0" layoutX="762.0" layoutY="74.0" onMouseClicked="#abrirMenuInsertar" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="70.0">
+         <image>
+            <Image url="@../img/agregar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

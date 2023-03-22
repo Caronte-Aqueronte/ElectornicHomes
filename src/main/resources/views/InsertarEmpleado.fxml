@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="395.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InsertarEmpleadoController">
+   <stylesheets>
+      <URL value="@/styles/insertarbodega.css" />
+   </stylesheets>
+   <children>
+      <MFXTextField fx:id="txtNombre" floatMode="BORDER" floatingText="Nombre" layoutX="65.0" layoutY="35.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXTextField fx:id="txtEdad" floatMode="BORDER" floatingText="Edad" layoutX="64.0" layoutY="110.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXComboBox fx:id="comboSucursal" floatMode="BORDER" floatingText="Sucursal" layoutX="64.0" layoutY="186.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXComboBox>
+      <MFXTextField fx:id="txtUsuario" floatMode="BORDER" floatingText="Usuario" layoutX="65.0" layoutY="257.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXTextField>
+      <MFXPasswordField fx:id="txtPassword" floatMode="BORDER" floatingText="Contraseña" layoutX="65.0" layoutY="336.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXPasswordField>
+      <MFXComboBox fx:id="comboRol" floatMode="BORDER" floatingText="Rol" layoutX="65.0" layoutY="408.0" prefHeight="50.0" prefWidth="266.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </MFXComboBox>
+      <MFXButton fx:id="btnGuardar" buttonType="RAISED" depthLevel="LEVEL4" layoutX="65.0" layoutY="482.0" onAction="#insertarEnBodega" prefHeight="50.0" prefWidth="266.0" rippleColor="#76ff03" text="Guardar empleado">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+   </children>
+</AnchorPane>

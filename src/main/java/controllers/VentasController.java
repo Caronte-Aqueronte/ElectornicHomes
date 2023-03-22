@@ -208,22 +208,24 @@ public class VentasController implements Initializable {
     private void buscarCliente(KeyEvent event) {
         if (!estadoCf) {
             try {
-                //traermos el nit de la entrada
-                long nit = Long.parseLong(txtNit.getText().trim());
-                Cliente cliente = new Cliente(nit);
-                //mandamos a buscar al empleado
-                Cliente clienteEncontrado = clienteService.buscarClientePorNit(cliente);
-                //si el resultado no es nulo entonces mostramos sus parametros
-                if (clienteEncontrado != null) {
-                    bloquearYBorrarDatosDelCliente();
-                    //cargamos los datos del cliente en los campos bloqueados
-                    txtNombre.setText(clienteEncontrado.getNombre());
-                    txtTelefono.setText(String.valueOf(clienteEncontrado.getTelefono()));
-                } else {
-                    habilitarDatosDelCliente();
-                    //borramos los campos
-                    this.txtNombre.setText("");
-                    this.txtTelefono.setText("");
+                if (!txtNit.getText().trim().isBlank()) {
+                    //traermos el nit de la entrada
+                    long nit = Long.parseLong(txtNit.getText().trim());
+                    Cliente cliente = new Cliente(nit);
+                    //mandamos a buscar al empleado
+                    Cliente clienteEncontrado = clienteService.buscarClientePorNit(cliente);
+                    //si el resultado no es nulo entonces mostramos sus parametros
+                    if (clienteEncontrado != null) {
+                        bloquearYBorrarDatosDelCliente();
+                        //cargamos los datos del cliente en los campos bloqueados
+                        txtNombre.setText(clienteEncontrado.getNombre());
+                        txtTelefono.setText(String.valueOf(clienteEncontrado.getTelefono()));
+                    } else {
+                        habilitarDatosDelCliente();
+                        //borramos los campos
+                        this.txtNombre.setText("");
+                        this.txtTelefono.setText("");
+                    }
                 }
             } catch (NumberFormatException ex) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "NIT con formato incorrecto.");
@@ -405,19 +407,21 @@ public class VentasController implements Initializable {
      * habilitado si el Switch CF no esta activado.
      */
     private void borrarTodosLosCampos() {
-        //dejamos los txt activos
-        this.txtNombre.setEditable(true);
-        this.txtTelefono.setEditable(true);
         if (this.estadoCf) {
             this.txtNit.setEditable(false);
+            this.txtNombre.setEditable(false);
+            this.txtTelefono.setEditable(false);
         } else {
             this.txtNit.setEditable(true);
+            this.txtNombre.setEditable(true);
+            this.txtTelefono.setEditable(true);
+
         }
         //borramos los campos
         this.txtNit.setText("");
         this.txtNombre.setText("");
         this.txtTelefono.setText("");
-        this.txtFecha.setText("");
+        this.txtFecha.setValue(null);
         this.txtTotal.setText("");
         this.txtNumItems.setText("");
     }

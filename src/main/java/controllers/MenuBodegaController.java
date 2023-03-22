@@ -26,9 +26,7 @@ public class MenuBodegaController extends Controller implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        panelContenedor.setFitToWidth(true);
-        panelContenedor.setFitToHeight(true);
+
     }    
 
     /**

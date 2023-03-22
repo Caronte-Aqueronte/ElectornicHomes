@@ -31,9 +31,6 @@ public class MenuVendedorController extends Controller implements Initializable 
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //se configura el scrollpane para que el contenido se auto ajuste al tamanio del mismo
-        panelContenedor.setFitToHeight(true);
-        panelContenedor.setFitToWidth(true);
 
     }
 

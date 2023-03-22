@@ -67,7 +67,12 @@ public class VentaService {
         }
         //guardamos el descuento y calculamos el importe de la venta a parti del mismo
         venta.setDescuento(descuento);
-        venta.setImporteVenta(venta.getTotal() - descuento);
+        //si el importe es menor a el descuento entonces seteamos en cero para que no haya errores
+        if (venta.getTotal() < descuento) {
+            venta.setImporteVenta(0);
+        } else {
+            venta.setImporteVenta(venta.getTotal() - descuento);
+        }
         //podemos mandar a gaurdar la venta
         if (!ventaRepository.registrarVenta(cliente, venta, carrito)) {
             throw new Exception("No se registró la venta.");

@@ -26,9 +26,6 @@ public class MenuInventarioController extends Controller implements Initializabl
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //se configura el scrollpane para que el contenido se auto ajuste al tamanio del mismo
-        panelContenedor.setFitToHeight(true);
-        panelContenedor.setFitToWidth(true);
     }
 
     /**
@@ -37,6 +34,7 @@ public class MenuInventarioController extends Controller implements Initializabl
      *
      * @param event
      */
+    @FXML
     private void abrirInventario(ActionEvent event) {
         abrirMenuEnScrollPane(panelContenedor, "Inventario", panelContenedor);
     }
@@ -47,6 +45,7 @@ public class MenuInventarioController extends Controller implements Initializabl
      *
      * @param event
      */
+    @FXML
     private void abrirPedidos(ActionEvent event) {
         abrirMenuEnScrollPane(panelContenedor, "Pedidos", panelContenedor);
     }

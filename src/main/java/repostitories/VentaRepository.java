@@ -22,20 +22,22 @@ import models.Venta;
 public class VentaRepository extends ConstructorDeObjetoVenta {
 
     /**
-     * Registra una venta en la base de dados. Para ello, registra a venta seguido del
-     * Cliente, Adquisicion, Desgloce y edicion del inventario.
-     * 
+     * Registra una venta en la base de dados. Para ello, registra a venta
+     * seguido del Cliente, Adquisicion, Desgloce y edicion del inventario.
+     *
      * @param cliente
      * @param venta
      * @param carrito
-     * @return 
+     * @return
      */
     public boolean registrarVenta(Cliente cliente, Venta venta, ObservableList<ProductoDTO> carrito) {
 
         try {
             Conector.CONEXION.setAutoCommit(false);//al ser una transaccion desactivamos el autocommit
             PreparedStatement ps = Conector.CONEXION.prepareStatement("INSERT INTO "
-                    + "RegistroVentas.Venta VALUES(?,?,?,?,?,?,?);");
+                    + "RegistroVentas.Venta (id_venta, sucursal, empleado, total, "
+                    + "descuento, importe_venta, fecha) "
+                    + "VALUES(?,?,?,?,?,?,?);");
 
             //damos valores a los ? con los datos de la venta
             ps.setString(1, venta.getIdVenta());
@@ -105,14 +107,16 @@ public class VentaRepository extends ConstructorDeObjetoVenta {
             return false;
         }
     }
+
     /**
      * Trae la ultima compra de un cliente a partir de su nit.
+     *
      * @param cliente
-     * @return 
+     * @return
      */
     public Venta traerUltimaCompraDeUnCliente(Cliente cliente) {
         String query = "SELECT *  FROM RegistroVentas.Venta a INNER JOIN RegistroVentas.Adquisicion b"
-                + " ON b.venta = a.id_venta WHERE b.cliente = ? ORDER BY a.fecha DESC LIMIT 1;";
+                + " ON b.venta = a.id_venta WHERE b.cliente = ? ORDER BY a.num_venta DESC LIMIT 1;";
         try (PreparedStatement ps = Conector.CONEXION.prepareCall(query)) {
             ps.setLong(1, cliente.getNit());
             ResultSet resultado = ps.executeQuery();

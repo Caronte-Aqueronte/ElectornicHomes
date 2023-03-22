@@ -34,6 +34,8 @@ public abstract class Controller {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/" + view + ".fxml"));//cargador de las escenas
             Parent parent = loader.load();//cargamos la escena
+            contenedor.setFitToHeight(true);
+            contenedor.setFitToWidth(true);
             contenedor.setContent(parent);//adjuntamos la escena al panel
         } catch (IOException ex) {
             ex.printStackTrace();

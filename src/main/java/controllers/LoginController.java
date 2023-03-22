@@ -80,6 +80,7 @@ public class LoginController extends Controller implements Initializable {
                 abrirMenu("MenuBodega", this.btnEntrar);
                 break;
             case "ADMINISTRACION":
+                abrirMenu("MenuAdmin", this.btnEntrar);
                 break;
             default:
                 new Alert(Alert.AlertType.ERROR, "Rol desconocido.").show();

@@ -65,6 +65,7 @@ CREATE TABLE RegistroVentas.Cliente(
 );
 
 CREATE TABLE RegistroVentas.Venta(
+    num_venta SERIAL NOT NULL,
     id_venta VARCHAR(50) NOT NULL,
     sucursal VARCHAR(50) NOT NULL,
     empleado INT NOT NULL,

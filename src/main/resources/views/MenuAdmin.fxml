@@ -9,25 +9,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.MenuAdminController">
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuAdminController">
    <children>
       <Pane prefHeight="591.0" prefWidth="246.0" styleClass="pane" stylesheets="@../styles/menuadmin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button graphicTextGap="20.0" layoutY="313.0" mnemonicParsing="false" onAction="#abrirReportes" prefHeight="60.0" prefWidth="246.0" stylesheets="@../styles/menuadmin.css" text="Reportes" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <graphic>
-                  <ImageView fitHeight="47.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/analitica.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
             <Button alignment="CENTER" graphicTextGap="20.0" layoutY="234.0" mnemonicParsing="false" onAction="#abrirTrabajadores" prefHeight="60.0" prefWidth="246.0" stylesheets="@../styles/menuadmin.css" text="Trabajadores" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
@@ -39,6 +24,21 @@
                   <ImageView fitHeight="48.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/trabajo-en-equipo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" graphicTextGap="20.0" layoutY="318.0" mnemonicParsing="false" onAction="#abrirReportes" prefHeight="60.0" prefWidth="246.0" stylesheets="@../styles/menuadmin.css" text="Reporte" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/analitica.png" />
                      </image>
                   </ImageView>
                </graphic>

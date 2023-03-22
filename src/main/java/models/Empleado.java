@@ -13,7 +13,6 @@ public class Empleado extends Sucursal {
     private int idEmpleado;
     private String nombre;
     private int edad;
-    private String sucursal;
     private String usuario;
     private String password;
     private String rol;
@@ -40,6 +39,7 @@ public class Empleado extends Sucursal {
         this.password = password;
     }
 
+    
     public int getIdEmpleado() {
         return idEmpleado;
     }

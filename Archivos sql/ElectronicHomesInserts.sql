@@ -411,27 +411,27 @@ INSERT INTO RegistroVentas.Cliente VALUES (0, 'CF', 0);
 
 ----------------------------- VENTAS SUCURSAL CENTRAL -----------------------------
 
-INSERT INTO RegistroVentas.Venta VALUES ('f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454', 'Sucursal Central', 1, 7000.00, 0.00, 7000.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('476ba707-1968-4cbe-a6fb-8cbac641a9a7', 'Sucursal Central', 2, 7000.00, 350.00, 6650.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('8d26e265-24c5-438f-8334-246b09cad087', 'Sucursal Central', 1, 7000.00, 0.00, 7000.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('53b15ecd-0557-40af-a269-5fe121019c43', 'Sucursal Central', 3, 600.00, 30.00, 570.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('e8886b27-41e5-44b1-b2df-2cd59a3d5778', 'Sucursal Central', 1, 600.00, 0.00, 600.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454', 'Sucursal Central', 1, 7000.00, 0.00, 7000.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('476ba707-1968-4cbe-a6fb-8cbac641a9a7', 'Sucursal Central', 2, 7000.00, 350.00, 6650.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('8d26e265-24c5-438f-8334-246b09cad087', 'Sucursal Central', 1, 7000.00, 0.00, 7000.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('53b15ecd-0557-40af-a269-5fe121019c43', 'Sucursal Central', 3, 600.00, 30.00, 570.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('e8886b27-41e5-44b1-b2df-2cd59a3d5778', 'Sucursal Central', 1, 600.00, 0.00, 600.00, '2023-03-11');
 
 ---------------------------- VENTAS SUCURSAL NORTE -------------------------------
 
-INSERT INTO RegistroVentas.Venta VALUES ('bcec5fce-f384-4b75-a696-3166402400c1', 'Sucursal Norte', 5, 600.00, 0.00, 600.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('d5126b9c-e7f3-46b1-904d-9bbce493e42c', 'Sucursal Norte', 5, 10000.00, 0.00, 10000.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('817fabed-c538-4c18-ab83-4cedda2fade8', 'Sucursal Norte', 5, 10000.00, 1000.00, 9000.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('1c7b6590-a2ed-455a-b6af-721e14be79bc', 'Sucursal Norte', 6, 10000.00, 0.00, 10000.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('1c0159b0-2d0b-4967-8a0f-f037825cc1ea', 'Sucursal Norte', 7, 250.00, 25.00, 225.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('bcec5fce-f384-4b75-a696-3166402400c1', 'Sucursal Norte', 5, 600.00, 0.00, 600.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('d5126b9c-e7f3-46b1-904d-9bbce493e42c', 'Sucursal Norte', 5, 10000.00, 0.00, 10000.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('817fabed-c538-4c18-ab83-4cedda2fade8', 'Sucursal Norte', 5, 10000.00, 1000.00, 9000.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('1c7b6590-a2ed-455a-b6af-721e14be79bc', 'Sucursal Norte', 6, 10000.00, 0.00, 10000.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('1c0159b0-2d0b-4967-8a0f-f037825cc1ea', 'Sucursal Norte', 7, 250.00, 25.00, 225.00, '2023-03-11');
 
 ---------------------------- VENTAS SUCURSAL SUR -------------------------------
 
-INSERT INTO RegistroVentas.Venta VALUES ('f738bc09-aeb0-4df2-b7cf-d0a27b12028d', 'Sucursal Sur', 9, 250.00, 0.00, 250.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('e62343a9-5162-4281-949b-447677bb4d92', 'Sucursal Sur', 10, 7000.00, 0.00, 7000.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('16c206af-164d-434c-b5c5-134b35b5026f', 'Sucursal Sur', 10, 250.00, 0.00, 250.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('20d8d14d-1898-4160-9810-91d5b4741250', 'Sucursal Sur', 10, 7000.00, 0.00, 7000.00, '2023-03-11');
-INSERT INTO RegistroVentas.Venta VALUES ('c4e14bd9-eacf-40e0-a1eb-99495712226e', 'Sucursal Sur', 10, 7000.00, 0.00, 7000.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('f738bc09-aeb0-4df2-b7cf-d0a27b12028d', 'Sucursal Sur', 9, 250.00, 0.00, 250.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('e62343a9-5162-4281-949b-447677bb4d92', 'Sucursal Sur', 10, 7000.00, 0.00, 7000.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('16c206af-164d-434c-b5c5-134b35b5026f', 'Sucursal Sur', 10, 250.00, 0.00, 250.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('20d8d14d-1898-4160-9810-91d5b4741250', 'Sucursal Sur', 10, 7000.00, 0.00, 7000.00, '2023-03-11');
+INSERT INTO RegistroVentas.Venta (id_venta, sucursal, empleado, total, descuento, importe_venta, fecha) VALUES ('c4e14bd9-eacf-40e0-a1eb-99495712226e', 'Sucursal Sur', 10, 7000.00, 0.00, 7000.00, '2023-03-11');
 
 
 
