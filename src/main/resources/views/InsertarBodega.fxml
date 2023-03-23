@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
 <?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import java.net.URL?>
 <?import javafx.scene.Cursor?>
@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="395.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.InsertarBodegaController">
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="395.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InsertarBodegaController">
     <stylesheets>
         <URL value="@/styles/insertarbodega.css" />
     </stylesheets>
@@ -21,7 +21,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </MFXTextField>
-      <MFXDatePicker fx:id="txtFecha" floatingText="Fecha" layoutX="65.0" layoutY="166.0" prefHeight="50.0" prefWidth="266.0">
+      <MFXDatePicker fx:id="txtFecha" floatMode="BORDER" floatingText="Fecha" layoutX="64.0" layoutY="174.0" prefHeight="50.0" prefWidth="266.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -41,10 +41,10 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </MFXButton>
-      <MFXComboBox fx:id="comboProducto" floatMode="BORDER" floatingText="Producto" layoutX="65.0" layoutY="253.0" prefHeight="50.0" prefWidth="266.0">
+      <MFXFilterComboBox fx:id="comboProducto" floatMode="BORDER" floatingText="Producto" layoutX="65.0" layoutY="262.0" prefHeight="50.0" prefWidth="266.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Arial" size="14.0" />
          </font>
-      </MFXComboBox>
+      </MFXFilterComboBox>
    </children>
 </AnchorPane>

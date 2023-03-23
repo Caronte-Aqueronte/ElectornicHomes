@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="563.0" minWidth="827.0" prefHeight="563.0" prefWidth="827.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.ReportesController">
+    <stylesheets>
+        <URL value="@/styles/reportes.css" />
+    </stylesheets>
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/reportes.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Estaticos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <MFXFilterComboBox fx:id="comboReporte" floatingText="Escoge un reporte" layoutX="50.0" layoutY="30.0" onAction="#cambioReporte" prefHeight="40.0" prefWidth="299.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </MFXFilterComboBox>
+                        <TableView fx:id="tablaReportes" layoutX="39.0" layoutY="100.0" prefHeight="398.0" prefWidth="754.0" stylesheets="@../styles/menuadmin.css" AnchorPane.bottomAnchor="28.800000000000068" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="33.80000000000007" AnchorPane.topAnchor="100.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/finanzas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab text="Dinamicos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <MFXComboBox fx:id="comboReporteD" floatMode="BORDER" floatingText="Escoge un reporte" layoutX="36.0" layoutY="41.0" onAction="#cambioReporteDinamico" prefHeight="40.0" prefWidth="362.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </MFXComboBox>
+                        <MFXComboBox fx:id="comboSucursal" floatMode="BORDER" floatingText="Sucursal" layoutX="430.0" layoutY="41.0" onAction="#cambioReporteDinamico" prefHeight="40.0" prefWidth="359.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </MFXComboBox>
+                        <TableView fx:id="tablaReporteDinamico" layoutX="36.0" layoutY="103.0" prefHeight="398.0" prefWidth="754.0" stylesheets="@../styles/menuadmin.css" AnchorPane.bottomAnchor="25.800000000000068" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.80000000000007" AnchorPane.topAnchor="103.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/analitica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

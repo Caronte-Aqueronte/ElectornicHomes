@@ -1,4 +1,5 @@
 constructoresDeObjetos\ConstructorProductoMasIngresoPorSucursalDTO.class
+tools\Encriptador.class
 controllers\InsertarBodegaController.class
 controllers\MenuAdminController.class
 controllers\MenuBodegaController.class
@@ -23,6 +24,7 @@ controllers\BodegaController$1.class
 dto\ProductoMasIngresoPorSucursalDTO.class
 controllers\BodegaController.class
 dto\BodegaDTO.class
+controllers\ReportesController.class
 controllers\PedidosController.class
 services\ReportesService.class
 controllers\EditarBodegaController.class
@@ -66,7 +68,6 @@ models\Compra.class
 models\Sucursal.class
 controllers\MenuInventarioController.class
 controllers\TrabajadoresController.class
-constructoresDeObjetos\ConstructorDeObjetoMasVendido.class
 dto\ProductoMasIngresoDTO.class
 constructoresDeObjetos\ConstructorProductoMasVendidoDTO.class
 constructoresDeObjetos\ConstructorDeObjetoClienteMasGanancia.class

@@ -7,7 +7,6 @@ package repostitories;
 import dto.ClientesMasGananciaDTO;
 import dto.ProductoMasVendidoDTO;
 import config.Conector;
-import constructoresDeObjetos.ConstructorDeObjetoMasVendido;
 import constructoresDeObjetos.ConstructorDeObjetoClienteMasGanancia;
 import constructoresDeObjetos.ConstructorEmpleadoMasIngresoDTO;
 import constructoresDeObjetos.ConstructorEmpleadoMasVentasDTO;
@@ -37,7 +36,6 @@ import javafx.collections.ObservableList;
  */
 public class ReporteRepository {
 
-    private final ConstructorDeObjetoMasVendido constructorDeObjetoMasVendido;
     private final ConstructorDeObjetoClienteMasGanancia constructorDeObjetoClienteMasGanancia;
     private final ConstructorSucursalMasVentasDTO constructorSucursalMasVentasDTO;
     private final ConstrutorSucursalMasIngreso construtorSucursalMasIngreso;
@@ -49,7 +47,6 @@ public class ReporteRepository {
     private final ConstructorProductoMasIngresoPorSucursalDTO constructorProductoMasIngresoPorSucursalDTO;
 
     public ReporteRepository() {
-        this.constructorDeObjetoMasVendido = new ConstructorDeObjetoMasVendido();
         this.constructorDeObjetoClienteMasGanancia = new ConstructorDeObjetoClienteMasGanancia();
         this.constructorSucursalMasVentasDTO = new ConstructorSucursalMasVentasDTO();
         this.construtorSucursalMasIngreso = new ConstrutorSucursalMasIngreso();
@@ -59,24 +56,6 @@ public class ReporteRepository {
         this.constructorProductoMasIngresoDTO = new ConstructorProductoMasIngresoDTO();
         this.constructorProductoMasVentasPorSucursalDTO = new ConstructorProductoMasVentasPorSucursalDTO();
         this.constructorProductoMasIngresoPorSucursalDTO = new ConstructorProductoMasIngresoPorSucursalDTO();
-    }
-
-    /**
-     * Obtiene los 10 productos mas vendidos.
-     *
-     * @return
-     */
-    public ObservableList<ProductoMasVendidoDTO> diezMasVendidos() {
-        try {
-            Statement st = Conector.CONEXION.createStatement();
-            ResultSet resultado = st.executeQuery("SELECT b.producto, "
-                    + "COUNT(b.producto) FROM RegistroVentas.Desgloce a INNER JOIN"
-                    + " RegistroRecursos.Compra b ON a.inventario = b.codigo_barras "
-                    + "GROUP BY b.producto ORDER BY count DESC LIMIT 10;");
-            return this.constructorDeObjetoMasVendido.construirLista(resultado);
-        } catch (SQLException e) {
-            return FXCollections.observableArrayList();
-        }
     }
 
     /**

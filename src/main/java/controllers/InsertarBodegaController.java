@@ -7,6 +7,7 @@ package controllers;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
 import io.github.palexdev.materialfx.controls.MFXDatePicker;
+import io.github.palexdev.materialfx.controls.MFXFilterComboBox;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import java.net.URL;
 import java.time.LocalDate;
@@ -37,7 +38,7 @@ public class InsertarBodegaController implements Initializable {
     @FXML
     private MFXButton btnInsertar;
     @FXML
-    private MFXComboBox<Producto> comboProducto;
+    private MFXFilterComboBox<Producto> comboProducto;
 
     /**
      * Initializes the controller class.

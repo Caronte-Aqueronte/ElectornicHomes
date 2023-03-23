@@ -10,12 +10,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="530.0" minWidth="862.0" prefHeight="614.0" prefWidth="877.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.TrabajadoresController">
+<AnchorPane id="AnchorPane" minHeight="530.0" minWidth="862.0" prefHeight="614.0" prefWidth="877.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TrabajadoresController">
     <stylesheets>
         <URL value="@/styles/trabajadores.css" />
     </stylesheets>
    <children>
-      <TableView fx:id="tablaEmpleados" layoutX="26.0" layoutY="151.0" prefHeight="439.0" prefWidth="825.0" stylesheets="@../styles/tables.css" AnchorPane.bottomAnchor="23.80000000000001" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="25.399999999999977" AnchorPane.topAnchor="151.0">
+      <TableView fx:id="tablaEmpleados" layoutX="26.0" layoutY="151.0" prefHeight="439.0" prefWidth="825.0" stylesheets="@../styles/menuadmin.css" AnchorPane.bottomAnchor="23.80000000000001" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="25.399999999999977" AnchorPane.topAnchor="151.0">
          <columns>
             <TableColumn fx:id="colId" prefWidth="164.0" text="Id" />
             <TableColumn fx:id="colNombre" prefWidth="164.0" text="Nombre" />

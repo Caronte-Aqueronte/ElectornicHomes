@@ -12,7 +12,7 @@
         <URL value="@/styles/inventario.css" />
     </stylesheets>
    <children>
-      <TableView fx:id="tablaInventario" layoutX="31.0" layoutY="83.0" prefHeight="490.0" prefWidth="742.0" stylesheets="@../styles/tables.css" AnchorPane.bottomAnchor="18.600000000000023" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="42.60000000000002" AnchorPane.topAnchor="83.0">
+      <TableView fx:id="tablaInventario" layoutX="31.0" layoutY="83.0" prefHeight="490.0" prefWidth="742.0" stylesheets="@../styles/menuinventario.css" AnchorPane.bottomAnchor="18.600000000000023" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="42.60000000000002" AnchorPane.topAnchor="83.0">
          <columns>
             <TableColumn fx:id="codugoBarrasColumn" prefWidth="75.0" text="Codigo de barras" />
             <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="Nombre" />

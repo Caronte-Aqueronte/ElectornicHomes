@@ -10,12 +10,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="815.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BodegaController">
+<AnchorPane id="AnchorPane" minHeight="551.0" minWidth="815.0" prefHeight="551.0" prefWidth="815.0" style="-fx-background-color: rgb(255,255,255);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BodegaController">
     <stylesheets>
         <URL value="@/styles/bodega.css" />
     </stylesheets>
    <children>
-      <TableView fx:id="tablaBodega" layoutX="21.0" layoutY="123.0" prefHeight="398.0" prefWidth="768.0" stylesheets="@../styles/tables.css" AnchorPane.bottomAnchor="29.600000000000023" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="123.0">
+      <TableView fx:id="tablaBodega" layoutX="21.0" layoutY="123.0" minHeight="398.0" minWidth="768.0" prefHeight="398.0" prefWidth="768.0" stylesheets="@../styles/menubodega.css" AnchorPane.bottomAnchor="29.600000000000023" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="123.0">
          <columns>
             <TableColumn fx:id="colCodigoB" prefWidth="75.0" text="Codigo de barras" />
             <TableColumn fx:id="colNombreB" prefWidth="164.0" text="Nombre" />

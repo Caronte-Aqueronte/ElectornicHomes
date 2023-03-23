@@ -18,25 +18,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 }
 
 .table-view .column-header-background{
-    -fx-background-color: linear-gradient(to bottom, #f57c00, #ffcc80);
+    -fx-background-color: linear-gradient(to bottom, #FF1744, #FF1744);
     -fx-background-radius: 30px 30px 0px 0px;
-    -fx-background-insets: 0 11px 0 0;
+   
     -fx-padding: 0 0 5px 0;
 }
 .table-view .column-header {
     -fx-background-color: transparent;
 }
 
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+
 .table-view .table-cell{
-    -fx-border-color: transparent;
     -fx-padding: 2 0 2 10px;
+    -fx-border-style: hidden solid hidden solid;
+    -fx-border-color: #FF1744;
 }
 
 /*Celdas impares*/
 .table-row-cell:odd{
-    -fx-background-color: #ffe0b2;
+
+    -fx-text-fill:#fff;
     -fx-background-insets: 0, 0 0 1 0;
     -fx-padding: 0.0em;
+    -fx-background-color: #fff;
 }
 /*Celdas pares*/
 .table-row-cell:even{
@@ -62,11 +72,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-padding: 2;
 }
 .table-view .virtual-flow .scroll-bar:vertical .thumb{
-    -fx-background-color:  linear-gradient(to bottom, #f57c00, #ffcc80);
+    -fx-background-color:   linear-gradient(to bottom, #FF1744, #FF1744);
 }
 
 .table-view .virtual-flow .scroll-bar:horizontal .thumb {
-    -fx-background-color:  linear-gradient(to right, #f57c00, #ffcc80);
+    -fx-background-color:   linear-gradient(to right, #FF1744, #FF1744);
 }
 
 .table-row-cell:highlighted {

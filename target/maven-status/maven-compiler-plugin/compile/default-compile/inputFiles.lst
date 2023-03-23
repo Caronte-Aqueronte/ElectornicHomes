@@ -1,3 +1,4 @@
+D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\tools\Encriptador.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjetoCompra.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\BodegaDTOService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorProductoMasVendidoDTO.java
@@ -5,7 +6,6 @@ D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\Bode
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\dto\ClientesMasGananciaDTO.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\EmpleadoService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\repostitories\ProductoRepository.java
-D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjetoMasVendido.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\dto\ProductoMasIngresoPorSucursalDTO.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorDeObjetoProducto.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorSucursalMasVentasDTO.java
@@ -50,6 +50,7 @@ D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\config\Starter.j
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstructorProductoMasVentasPorSucursalDTO.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\services\CompraService.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\dto\ProductoMasVendidoPorSucursalDTO.java
+D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\ReportesController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\constructoresDeObjetos\ConstrutorSucursalMasIngreso.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\InsertarEmpleadoController.java
 D:\Documents\NetBeansProjects\ProyectoUnoArchivos\src\main\java\controllers\ProductosController.java

@@ -15,7 +15,7 @@
         <URL value="@/styles/productos.css" />
     </stylesheets>
    <children>
-      <TableView fx:id="tablaProductos" layoutX="17.0" layoutY="106.0" prefHeight="445.0" prefWidth="799.0" stylesheets="@../styles/tables.css" AnchorPane.bottomAnchor="42.39999999999998" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.799999999999955" AnchorPane.topAnchor="106.0">
+      <TableView fx:id="tablaProductos" layoutX="17.0" layoutY="106.0" prefHeight="445.0" prefWidth="799.0" stylesheets="@../styles/menubodega.css" AnchorPane.bottomAnchor="42.39999999999998" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.799999999999955" AnchorPane.topAnchor="106.0">
          <columns>
             <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre del producto" />
             <TableColumn fx:id="colDescripcion" prefWidth="75.0" text="Descripción" />

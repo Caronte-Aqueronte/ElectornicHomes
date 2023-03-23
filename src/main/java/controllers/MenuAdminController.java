@@ -31,6 +31,7 @@ public class MenuAdminController extends Controller implements Initializable {
 
     @FXML
     private void abrirReportes(ActionEvent event) {
+         this.abrirMenuEnScrollPane(panelContenedor, "Reportes", panelContenedor);
     }
 
     @FXML

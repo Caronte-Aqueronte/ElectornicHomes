@@ -18,7 +18,7 @@ CREATE TABLE RegistroPersonal.Empleado(
     edad INT NOT NULL,
     sucursal VARCHAR(50) NOT NULL,
     usuario VARCHAR(50) UNIQUE NOT NULL,
-    contra VARCHAR(50) NOT NULL,
+    contra TEXT NOT NULL,
     rol VARCHAR(50) NOT NULL,
     PRIMARY KEY (id_empleado),
     FOREIGN KEY (sucursal) REFERENCES RegistroPersonal.Sucursal(nombre) ON DELETE CASCADE ON UPDATE CASCADE 

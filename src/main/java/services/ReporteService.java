@@ -28,15 +28,6 @@ public class ReporteService {
         this.reporteRepository = new ReporteRepository();
     }
 
-    /**
-     * Utiliza diezMasVendidos() de ReporteRepository para traer los 10
-     * productos mas vendidos.
-     *
-     * @return
-     */
-    public ObservableList<ProductoMasVendidoDTO> diezMasVendidos() {
-        return reporteRepository.diezMasVendidos();
-    }
 
     /**
      * Utiliza diezClientesMasIngreso() de ReporteRepository para traer los 10

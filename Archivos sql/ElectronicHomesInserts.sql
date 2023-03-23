@@ -7,60 +7,60 @@ INSERT INTO RegistroPersonal.Sucursal VALUES ('Sucursal Sur');
 
 --Vendedores de la Sucursal Central
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Luis Monterroso', 20, 'Sucursal Central', '1_luis_CT', '123', 'VENDEDOR');
+VALUES ('Luis Monterroso', 20, 'Sucursal Central', '1_luis_CT', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Raquel Yoxom', 20, 'Sucursal Central', '2_raquel_CT', '123', 'VENDEDOR');
+VALUES ('Raquel Yoxom', 20, 'Sucursal Central', '2_raquel_CT', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Luis Lopez', 20, 'Sucursal Central', '3_luisL_CT', '123', 'VENDEDOR');
+VALUES ('Luis Lopez', 20, 'Sucursal Central', '3_luisL_CT', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 
 --Encargado de inventario de la Sucursal Central
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Mauricio Gonzales', 29, 'Sucursal Central', '4_mauricio_CT', '123', 'INVENTARIO');
+VALUES ('Mauricio Gonzales', 29, 'Sucursal Central', '4_mauricio_CT', '2y7kNMTIUXutTgMq7uNEGQ==', 'INVENTARIO');
 
 ---------------------------------- INSERTS DE EMPLEADOS Sucurlsal Norte------------------------------------------------------
 
 --Vendedores de la Sucursal Norte
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Alex Lima', 22, 'Sucursal Norte', '5_alex', '123', 'VENDEDOR');
+VALUES ('Alex Lima', 22, 'Sucursal Norte', '5_alex', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Diego Guzman', 25, 'Sucursal Norte', '6_diego', '123', 'VENDEDOR');
+VALUES ('Diego Guzman', 25, 'Sucursal Norte', '6_diego', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Maria Lemus', 28, 'Sucursal Norte', '7_maria', '123', 'VENDEDOR');
+VALUES ('Maria Lemus', 28, 'Sucursal Norte', '7_maria', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 
 --Encargado de inventario de la Sucursal Norte
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Patricia Salanic', 24, 'Sucursal Norte', '8_patricia', '123', 'INVENTARIO');
+VALUES ('Patricia Salanic', 24, 'Sucursal Norte', '8_patricia', '2y7kNMTIUXutTgMq7uNEGQ==', 'INVENTARIO');
 
 ---------------------------------- INSERTS DE EMPLEADOS Sucursal Sur------------------------------------------------------
 
 --Vendedores de la Sucursal Sur
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Gabriela Tzun', 25, 'Sucursal Sur', '9_gabriela', '123', 'VENDEDOR');
+VALUES ('Gabriela Tzun', 25, 'Sucursal Sur', '9_gabriela', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Walter Montenegro', 25, 'Sucursal Sur', '10_walter', '123', 'VENDEDOR');
+VALUES ('Walter Montenegro', 25, 'Sucursal Sur', '10_walter', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Abigail Briones', 28, 'Sucursal Sur', '11_abigail', '123', 'VENDEDOR');
+VALUES ('Abigail Briones', 28, 'Sucursal Sur', '11_abigail', '2y7kNMTIUXutTgMq7uNEGQ==', 'VENDEDOR');
 
 --Encargado de inventario de la Sucursal Sur
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Humberto Sac', 24, 'Sucursal Sur', '12_humberto', '123', 'INVENTARIO');
+VALUES ('Humberto Sac', 24, 'Sucursal Sur', '12_humberto', '2y7kNMTIUXutTgMq7uNEGQ==', 'INVENTARIO');
 
 
 ---------------------------------- INSERTS DE EMPLEADOS BODEGA------------------------------------------------------
 
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Rodrigo Lopez', 28, 'Sucursal Central', '13_rodrigo', '123', 'BODEGA');
+VALUES ('Rodrigo Lopez', 28, 'Sucursal Central', '13_rodrigo', '2y7kNMTIUXutTgMq7uNEGQ==', 'BODEGA');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Ruth Rodriguez', 28, 'Sucursal Central', '14_ruth', '123', 'BODEGA');
+VALUES ('Ruth Rodriguez', 28, 'Sucursal Central', '14_ruth', '2y7kNMTIUXutTgMq7uNEGQ==', 'BODEGA');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Sara Montejo', 28, 'Sucursal Central', '15_sara', '123', 'BODEGA');
+VALUES ('Sara Montejo', 28, 'Sucursal Central', '15_sara', '2y7kNMTIUXutTgMq7uNEGQ==', 'BODEGA');
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Jordi Campollo', 28, 'Sucursal Central', '16_jordi', '123', 'BODEGA');
+VALUES ('Jordi Campollo', 28, 'Sucursal Central', '16_jordi', '2y7kNMTIUXutTgMq7uNEGQ==', 'BODEGA');
 
 ---------------------------------- INSERTS DE EMPLEADOS ADMINISTRACION------------------------------------------------------
 
 INSERT INTO RegistroPersonal.Empleado(nombre, edad, sucursal, usuario, contra, rol) 
-VALUES ('Antonio Guzman', 20, 'Sucursal Central', '17_antonio', '123', 'ADMINISTRACION');
+VALUES ('Antonio Guzman', 20, 'Sucursal Central', '17_antonio', '2y7kNMTIUXutTgMq7uNEGQ==', 'ADMINISTRACION');
 
 ---------------------------------- INSERTS DE PRODUCTOS ------------------------------------------------------
 
