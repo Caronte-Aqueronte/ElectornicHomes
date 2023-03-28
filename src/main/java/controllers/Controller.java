@@ -47,8 +47,10 @@ public abstract class Controller {
      *
      * @param view
      * @param elemento
+     * @param maximized
+     * @param resizable
      */
-    protected void abrirMenu(String view, Node elemento) {
+    protected void abrirMenu(String view, Node elemento, boolean maximized, boolean resizable) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/" + view + ".fxml"));//cargamos el menu
             Parent parent = loader.load();//crear un pareinte
@@ -57,7 +59,8 @@ public abstract class Controller {
             stage.setScene(scene);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/aparato-electrico.png")));//le damos un icono a la ventana
             stage.show();//ensenamos la ventana
-            stage.setMaximized(true);//la maximizamos
+            stage.setMaximized(maximized);//la maximizamos
+            stage.setResizable(resizable);
             //codigo para cerrar la ventana actual
             Stage stageActual = (Stage) elemento.getScene().getWindow();//obtenemos la ventana actual
             stageActual.close();//cerramos la ventana actual

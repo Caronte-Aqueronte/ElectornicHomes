@@ -71,16 +71,16 @@ public class LoginController extends Controller implements Initializable {
     private void elegirMenu(Empleado empleado) {
         switch (empleado.getRol()) {
             case "VENDEDOR":
-                abrirMenu("MenuVendedor", this.btnEntrar);
+                abrirMenu("MenuVendedor", this.btnEntrar, true, true);
                 break;
             case "INVENTARIO":
-                abrirMenu("MenuInventario", this.btnEntrar);
+                abrirMenu("MenuInventario", this.btnEntrar, true, true);
                 break;
             case "BODEGA":
-                abrirMenu("MenuBodega", this.btnEntrar);
+                abrirMenu("MenuBodega", this.btnEntrar, true, true);
                 break;
             case "ADMINISTRACION":
-                abrirMenu("MenuAdmin", this.btnEntrar);
+                abrirMenu("MenuAdmin", this.btnEntrar, true, true);
                 break;
             default:
                 new Alert(Alert.AlertType.ERROR, "Rol desconocido.").show();

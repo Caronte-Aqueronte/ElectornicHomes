@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
 <?import java.net.URL?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="874.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuBodegaController">
@@ -15,9 +17,9 @@
       <URL value="@/styles/menuinventario.css" />
    </stylesheets>
    <children>
-      <Pane prefHeight="591.0" prefWidth="246.0" styleClass="pane" stylesheets="@../styles/menubodega.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" spacing="10.0" styleClass="pane" stylesheets="@../styles/menubodega.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button graphicTextGap="20.0" layoutY="313.0" mnemonicParsing="false" onAction="#abrirBodega" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuinventario.css" text="Bodega" textFill="WHITE">
+            <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#abrirBodega" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuinventario.css" text="Bodega" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -32,7 +34,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="CENTER" graphicTextGap="20.0" layoutY="234.0" mnemonicParsing="false" onAction="#abrirProductos" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Catalogo" textFill="WHITE">
+            <Button alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" onAction="#abrirProductos" prefHeight="60.0" prefWidth="246.0" styleClass="boton" stylesheets="@../styles/menuvendedor.css" text="Catalogo" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -48,7 +50,36 @@
                </graphic>
             </Button>
          </children>
-      </Pane>
-      <MFXScrollPane fx:id="panelContenedor" layoutX="246.0" prefHeight="607.0" prefWidth="532.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      </VBox>
+      <MFXScrollPane fx:id="panelContenedor" layoutX="246.0" layoutY="8.0" prefHeight="430.0" prefWidth="628.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0" />
+      <AnchorPane layoutX="10.0" layoutY="518.0" prefHeight="60.0" prefWidth="913.0" styleClass="pane" stylesheets="@../styles/menubodega.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <MFXButton buttonType="RAISED" layoutX="760.0" layoutY="11.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#logOut" rippleColor="RED" stylesheets="@../styles/menuinventario.css" text="Cerrar sesión" textFill="WHITE" AnchorPane.rightAnchor="14.599999999999994">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/shutdown.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXButton>
+            <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
+               <image>
+                  <Image url="@../img/usuario.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelUsuario" layoutX="52.0" layoutY="11.0" prefHeight="38.0" prefWidth="246.0" AnchorPane.leftAnchor="60.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

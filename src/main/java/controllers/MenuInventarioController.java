@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -20,12 +21,17 @@ public class MenuInventarioController extends Controller implements Initializabl
 
     @FXML
     private MFXScrollPane panelContenedor;
+    @FXML
+    private Label labelUsuario;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        //setear la label con el nombre del usuario logeado
+        labelUsuario.setText(LoginController.empleadoLogeado.getNombre() + ", " + LoginController.empleadoLogeado.getSucursal()
+                + "\n" + LoginController.empleadoLogeado.getRol());
     }
 
     /**
@@ -48,5 +54,10 @@ public class MenuInventarioController extends Controller implements Initializabl
     @FXML
     private void abrirPedidos(ActionEvent event) {
         abrirMenuEnScrollPane(panelContenedor, "Pedidos", panelContenedor);
+    }
+
+    @FXML
+    private void logOut(ActionEvent event) {
+        this.abrirMenu("Login", labelUsuario, false, false);
     }
 }
